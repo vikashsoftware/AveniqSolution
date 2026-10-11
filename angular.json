@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "projects": {
+    "aveniq": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "src/main.ts",
+            "index": "src/index.html",
+            "tsConfig": "tsconfig.json",
+            "outputPath": "dist/aveniq",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "public/styles.css",
+              "public/chat.css",
+              "src/layout.css"
+            ],
+            "optimization": true,
+            "outputHashing": "all"
+          }
+        }
+      }
+    }
+  }
+}
