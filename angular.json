@@ -7,12 +7,12 @@
       "sourceRoot": "src",
       "architect": {
         "build": {
-          "builder": "@angular/build:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "browser": "src/main.ts",
-            "index": "src/index.html",
-            "tsConfig": "tsconfig.json",
             "outputPath": "dist/aveniq",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "tsConfig": "tsconfig.json",
             "assets": [
               {
                 "glob": "**/*",
@@ -23,15 +23,13 @@
               "public/styles.css",
               "public/chat.css",
               "src/layout.css"
-            ],
-            "optimization": true,
-            "outputHashing": "all"
+            ]
           }
         },
         "serve": {
-          "builder": "@angular/build:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "buildTarget": "aveniq:build"
+            "browserTarget": "aveniq:build"
           }
         }
       }
