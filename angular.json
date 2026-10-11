@@ -27,8 +27,17 @@
             "optimization": true,
             "outputHashing": "all"
           }
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "options": {
+            "buildTarget": "aveniq:build"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
